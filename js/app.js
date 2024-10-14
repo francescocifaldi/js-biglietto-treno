@@ -18,5 +18,8 @@ else if(numberAge>65){
 
 finalPrice = price - ((price * discount)/100);
 
-console.log(`Importo da tariffario: €${price.toFixed(2)}`);
+if(discount!=0){
+    console.log(`Importo da tariffario: €${price.toFixed(2)}`);
+    console.log(`Hai diritto ad uno sconto del ${discount}%!`)
+}
 console.log(`Importo dovuto: €${finalPrice.toFixed(2)}`);
