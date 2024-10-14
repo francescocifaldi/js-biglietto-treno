@@ -7,7 +7,6 @@ let numberAge = parseInt(age);
 
 let price = numberKm*pricePerKm;
 let discount = 0;
-let finalPrice;
 
 if(numberAge<18){
     discount = 20;
@@ -16,10 +15,11 @@ else if(numberAge>65){
     discount=40;
 }
 
-finalPrice = price - ((price * discount)/100);
-
 if(discount!=0){
     console.log(`Importo da tariffario: €${price.toFixed(2)}`);
     console.log(`Hai diritto ad uno sconto del ${discount}%!`)
 }
-console.log(`Importo dovuto: €${finalPrice.toFixed(2)}`);
+
+price = price - ((price * discount)/100);
+
+console.log(`Importo dovuto: €${price.toFixed(2)}`);
